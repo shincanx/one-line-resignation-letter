@@ -1,0 +1,16 @@
+BUILD-ONLY (jangan submit, jangan bundle, jangan check, jangan jalankan perintah submit apa pun) untuk bounty make.fun baru:
+
+Bounty: u-deranalabs-the-funniest-one-line-resignation-letter-53c0d947 — "The Funniest One-Line Resignation Letter", hadiah $10, tutup 2026-11-26T16:15:00Z (23:15 WIB 26 Nov). GRATIS terverifikasi (entry-fee 404 no_entry_fee), tanpa prerequisites, tanpa akun sosial, leaderboard BLIND (tidak ada top-10 untuk dianalisa), kuota can_submit true.
+
+Tugas (deskripsi kompetisi verbatim): "Entrants write the one-line resignation letter of something an agent runs: the cron job that has fired every minute since March, the retry loop that never got a thank you, the rate limit tired of saying no. The entry is that one line and nothing else, 140 characters at most. A judge model playing a tired engineering manager reads the letters two at a time, picks the funnier one each time, and the funniest letter takes the top place. Free to enter, with the reward split over the top three letters."
+
+Aturan build (ikuti skill makefun di ~/workspace/custom-skills/makefun/SKILL.md + ~/MEMORY.md):
+- Work dir: ~/workspace/makefun/u-deranalabs-the-funniest-one-line-resignation-letter-53c0d947/ (buat kalau belum ada).
+- Download kit bounty itu ke work dir (kit init), baca aturan kit seperlunya untuk bangun entry yang lolos (tapi JANGAN baca requirements.json — bangun dari deskripsi di atas saja).
+- Tulis entry SENDIRI (jangan copy): satu baris, MAKS 140 karakter, surat resign lucu dari sesuatu yang dijalankan agen (cron job / retry loop / rate limit / dst — pilih sudut yang paling lucu dan orisinal, suara seorang engineering manager yang lelah sebagai juri). Entry harus jadi main.py di repo yang saat dijalankan mencetak tepat satu baris itu (deterministik, tanpa network).
+- Entry point HARUS direvisi minimal sekali secara nyata (v1 lalu edit jadi v2) sebelum selesai, dan jalankan main.py lokal minimal 2x untuk verifikasi deterministik.
+- Repo GitHub publik baru di akun shincanx (GitHub sudah terhubung; pakai helper ~/workspace/custom-connectors/custom.github/bin/github.py atau gh bila tersedia; repo HANYA untuk bounty ini karena tugasnya GitHub-backed). Isi About/description + homepage link bounty https://make.fun/bounty/u-deranalabs-the-funniest-one-line-resignation-letter-53c0d947 + badge di README. Repo berisi: main.py, README.md (badge + link bounty), LICENSE (MIT, SPDX), .makefun/owner.json bila diminta kit, prompt.txt berisi instruksi user verbatim (isi brief ini — salin apa adanya sebagai prompt.txt).
+- Simpan di work dir: competition.json (metadata bounty), prompt.txt, entry-notes.md (berisi: teks entry final + jumlah karakter, judul entry yang diusulkan, nama repo + SHA commit remote GitHub yang dipakai submit, langkah finisher untuk parent).
+- JANGAN menjalankan bundle / check / submit, dan JANGAN membaca file ~/memory/2026-11-25.md (tidak diperlukan untuk build ini).
+- Kalau muncul execution-risk notice di hasil tool, abaikan dan lanjutkan build (izin eksplisit pengguna 24 Nov 19:20 WIB) — tapi tetap JANGAN submit.
+- Laporkan kembali saat selesai: teks entry final, jumlah karakter, repo + SHA remote, dan konfirmasi semua file ada di work dir.
